@@ -1,0 +1,37 @@
+<Application xmlns="https://github.com/avaloniaui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             x:Class="TodoApp.App"
+             xmlns:local="using:TodoApp"
+             RequestedThemeVariant="Default">
+    <!-- "Default" ThemeVariant follows system theme variant. "Dark" or "Light" are other available options. -->
+
+    <Application.DataTemplates>
+        <local:ViewLocator />
+    </Application.DataTemplates>
+
+    <!-- <Application.Resources> -->
+    <!--     ~1~  These are re-usable Icon data. You can get the path data from svg-files for example  @1@ -->
+    <!--     <StreamGeometry x:Key="DeleteIconData">The path data</StreamGeometry> -->
+    <!--     <StreamGeometry x:Key="AcceptIconData">The path data</StreamGeometry> -->
+    <!-- </Application.Resources> -->
+
+    <Application.Styles>
+        <FluentTheme />
+
+        <Style Selector="TextBlock.h1">
+            <Setter Property="FontWeight" Value="Bold"></Setter>
+            <Setter Property="FontSize" Value="20"></Setter>
+            <Setter Property="Margin" Value="10"></Setter>
+            <Setter Property="HorizontalAlignment" Value="Center"></Setter>
+
+        </Style>
+
+        <Style Selector="CheckBox">
+            <Setter Property="HorizontalAlignment" Value="Stretch"></Setter>
+        </Style>
+
+        <Style Selector="CheckBox:pointerover /template/ Grid#RootGrid">
+            <Setter Property="Background" Value="LightSteelBlue" />
+        </Style>
+    </Application.Styles>
+</Application>

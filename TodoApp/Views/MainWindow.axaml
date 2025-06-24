@@ -1,0 +1,63 @@
+<Window xmlns="https://github.com/avaloniaui"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:vm="using:TodoApp.ViewModels"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:viewModels="clr-namespace:TodoApp.ViewModels"
+        xmlns:views="clr-namespace:TodoApp.Views"
+        mc:Ignorable="d" d:DesignWidth="300" d:DesignHeight="500"
+        x:CompileBindings="True"
+        x:DataType="viewModels:MainWindowViewModel"
+        x:Class="TodoApp.Views.MainWindow"
+        Icon="/Assets/avalonia-logo.ico"
+        Width="300" Height="500" Padding="4"
+        Title="BasicMvvmSample">
+
+    <!-- This is just used by the designer / previewer -->
+    <Design.DataContext>
+        <vm:MainWindowViewModel />
+    </Design.DataContext>
+
+    <Grid RowDefinitions="Auto, *, Auto" x:Name="Root">
+
+        <TextBlock Text="Todo:" Classes="h1" />
+
+        <ScrollViewer Grid.Row="1">
+            <!-- This ItemsControl show all added ToDoItems. -->
+            <!-- It needs to be placed inside a ScrollViewer because other than a ListBox it has not its own -->
+            <ItemsControl ItemsSource="{Binding ToDoItems}">
+                <ItemsControl.ItemTemplate>
+                    <DataTemplate DataType="vm:TodoItemViewModel">
+                        <Grid ColumnDefinitions="*, Auto">
+                            <CheckBox Content="{Binding Content}"
+                                      IsChecked="{Binding IsChecked}">
+                            </CheckBox>
+
+                            <Button Command="{Binding #Root.((vm:MainWindowViewModel)DataContext).RemoveItemCommand}"
+                                    CommandParameter="{Binding .}"
+                                    Grid.Column="1">
+                                Delete
+                            </Button>
+                        </Grid>
+                    </DataTemplate>
+                </ItemsControl.ItemTemplate>
+            </ItemsControl>
+        </ScrollViewer>
+
+        <!-- This TextBox can be used to add new ToDoItems -->
+        <TextBox Grid.Row="2"
+                 Text="{Binding NewItemContent}"
+                 Watermark="Add a new Item">
+            <TextBox.InnerRightContent>
+                <Button Command="{Binding AddItemCommand}">
+                    Add
+                </Button>
+            </TextBox.InnerRightContent>
+            <TextBox.KeyBindings>
+                <KeyBinding Command="{Binding AddItemCommand}" Gesture="Enter"></KeyBinding>
+            </TextBox.KeyBindings>
+        </TextBox>
+    </Grid>
+
+
+</Window>
