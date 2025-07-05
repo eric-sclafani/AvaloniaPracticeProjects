@@ -11,6 +11,8 @@
         Title="My Notes"
         TransparencyLevelHint="AcrylicBlur"
         Background="Transparent"
+        Width="1200"
+        Height="800"
         ExtendClientAreaToDecorationsHint="True"
         WindowStartupLocation="CenterScreen">
 
@@ -29,11 +31,17 @@
             </ExperimentalAcrylicBorder.Material>
         </ExperimentalAcrylicBorder>
 
-        <StackPanel>
-            
+        
+        <StackPanel Width="1200" Margin="20">
+            <TextBlock 
+                    TextAlignment="Center"
+                    FontSize="30"
+                    FontWeight="Bold">
+                My Notes
+            </TextBlock>
             <StackPanel Margin="40" 
-                        Orientation="Horizontal" 
-                        HorizontalAlignment="Left" 
+                        Spacing="20"
+                        HorizontalAlignment="Center" 
                         VerticalAlignment="Top">
                 
                 <StackPanel Spacing="10">
@@ -43,6 +51,7 @@
                              Margin="0 0 20 0"
                              Text="{Binding NewNoteTitle}"
                              TextWrapping="Wrap"
+                             MaxLength="50"
                              />
                     
                     <TextBox Height="100" 
@@ -55,9 +64,8 @@
                              TextWrapping="Wrap"/>
                 </StackPanel>
                 
-                
-            
                 <Button VerticalAlignment="Center" 
+                        HorizontalAlignment="Center"
                         Command="{Binding AddNewNoteCommand}"
                         IsEnabled="{Binding IsEnabled}">
                     <Button.Content>

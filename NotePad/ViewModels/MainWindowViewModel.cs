@@ -15,9 +15,7 @@ public partial class MainWindowViewModel : ViewModelBase
 
 	public MainWindowViewModel()
 	{
-		Notes.Add(new NoteViewModel(new Note("Test note 1", "this is my text for test note 1")));
-		Notes.Add(new NoteViewModel(new Note("Test note 2", "this is my text for test note 2")));
-		Notes.Add(new NoteViewModel(new Note("Test note 3", "this is my text for test note 3")));
+		
 	}
 	
 	[RelayCommand]

@@ -12,15 +12,18 @@
                 CornerRadius="3"
                 BoxShadow="5 5 8 0 DarkGray"
                 Padding="10" 
-                Margin="10"
-                Cursor="Hand">
-            <StackPanel Margin="10">
+                Margin="10">
+            <StackPanel Margin="10" Spacing="10">
                 <TextBlock Text="{Binding Title}" 
                            Foreground="Black"
                            FontWeight="Bold">
                     
                 </TextBlock>
-                <TextBlock Text="{Binding Text}" Foreground="Black"></TextBlock>
+                <TextBlock Text="{Binding Text}" 
+                           Foreground="Black"
+                           TextWrapping="Wrap"
+                           MaxWidth="200">
+                </TextBlock>
             </StackPanel>
             
             <Border.Styles>
@@ -32,6 +35,4 @@
                 </Style>
             </Border.Styles>
         </Border>
-        
-   
 </UserControl>

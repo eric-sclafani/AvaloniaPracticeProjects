@@ -14,5 +14,8 @@ public partial class NoteViewModel : ViewModelBase
 
 	public string Title => _note.Title;
 	public string Text => _note.Text;
+	
+	
+	
 
 }
