@@ -10,6 +10,10 @@
         <entry key="MusicStore/Views/MusicStoreView.axaml" value="MusicStore/MusicStore.csproj" />
         <entry key="MusicStore/Views/MusicStoreWindow.axaml" value="MusicStore/MusicStore.csproj" />
         <entry key="MusicStore/icons.axaml" value="MusicStore/MusicStore.csproj" />
+        <entry key="NotePad/App.axaml" value="NotePad/NotePad.csproj" />
+        <entry key="NotePad/Icons.axaml" value="NotePad/NotePad.csproj" />
+        <entry key="NotePad/Views/MainWindow.axaml" value="NotePad/NotePad.csproj" />
+        <entry key="NotePad/Views/NoteView.axaml" value="NotePad/NotePad.csproj" />
         <entry key="TodoApp/App.axaml" value="TodoApp/TodoApp.csproj" />
         <entry key="TodoApp/Views/MainWindow.axaml" value="TodoApp/TodoApp.csproj" />
         <entry key="TodoApp/Views/ReactiveUiCommandsSampleView.axaml" value="TodoApp/TodoApp.csproj" />

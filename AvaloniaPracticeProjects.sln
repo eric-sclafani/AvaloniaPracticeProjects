@@ -4,6 +4,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TodoApp", "TodoApp\TodoApp.
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MusicStore", "MusicStore\MusicStore.csproj", "{478E6798-CE60-4E85-AA25-7F1A1C378488}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "NotePad", "NotePad\NotePad.csproj", "{5455DB21-5AD8-4591-A88C-32990CC28480}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -18,5 +20,9 @@ Global
 		{478E6798-CE60-4E85-AA25-7F1A1C378488}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{478E6798-CE60-4E85-AA25-7F1A1C378488}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{478E6798-CE60-4E85-AA25-7F1A1C378488}.Release|Any CPU.Build.0 = Release|Any CPU
+		{5455DB21-5AD8-4591-A88C-32990CC28480}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{5455DB21-5AD8-4591-A88C-32990CC28480}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{5455DB21-5AD8-4591-A88C-32990CC28480}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{5455DB21-5AD8-4591-A88C-32990CC28480}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 EndGlobal

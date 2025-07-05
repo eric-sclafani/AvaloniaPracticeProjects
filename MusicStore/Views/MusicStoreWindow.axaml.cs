@@ -15,7 +15,7 @@ public partial class MusicStoreWindow : Window
 		WeakReferenceMessenger.Default.Register<MusicStoreWindow, MusicStoreClosedMessage>(this,
 			static (window, message) =>
 			{
-				window.Close(message.SelectedAlbum); // close the dialog and return the selected album
+				window.Close(message.SelectedAlbums); // close the dialog and return the selected album
 			});
 	}
 }
